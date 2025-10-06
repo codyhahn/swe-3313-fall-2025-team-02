@@ -1,4 +1,4 @@
-# SWE-3313-Fall-2025-Team-03: *Is a Hotdog a Sandwich*
+# SWE-3313-Fall-2025-Team-02: *Is a Hotdog a Sandwich*
 
 Welcome to the official project repository for **Team 02 - Is a Hotdog a Sandwhich!**  
 Here you’ll find everything related to our SWE 3313 course project — words here...
