@@ -3,7 +3,7 @@
 Welcome to the official project repository for **Team 02 - Is a Hotdog a Sandwhich!**  
 Here you’ll find everything related to our SWE 3313 course project — words here...
 
----
+
 
 ## Project Overview
 
@@ -29,7 +29,7 @@ Click on each name to view their resume:
 ## Team Assignments
 
 Our ongoing and completed team assignments are organized and accessible here:  
-👉 [View Team Assignments](#)
+ [View Team Assignments](#)
 
 ---
 
