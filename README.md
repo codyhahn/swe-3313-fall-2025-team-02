@@ -33,7 +33,7 @@ Our ongoing and completed team assignments are organized and accessible here:
 
 
 
-## Technology Stack
+## Technology Selection
 
 We selected **Python**, **Flask**, and **SQLite** for this project because of their simplicity, flexibility, and portability.  
 This combination enables quick development, clear data management, and easy deployment.
