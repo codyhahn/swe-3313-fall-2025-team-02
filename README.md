@@ -39,7 +39,7 @@ We selected **Python**, **Flask**, and **SQLite** for this project because of th
 This combination enables quick development, clear data management, and easy deployment.
 
 Learn more about our choices here:  
-[Technology Selection](#)
+[Technology Selection](https://github.com/codyhahn/swe-3313-fall-2025-team-02/blob/main/project-plan/technology-selection/README.md)
 
 
 
