@@ -17,7 +17,7 @@ Our goal is to create a sleek, intuitive platform where users can explore, learn
 Meet the team behind *Is a Hotdog a Sandwich*!  
 Click on each name to view their resume:
 
-- [Amir Aissat's Resume](#)    
+- [Amir Aissat's Resume](https://github.com/codyhahn/swe-3313-fall-2025-team-02/blob/main/project-plan/resumes/Amir_Aissat_Resume.md)    
 - [Team Member 2's Resume](#)  
 - [Team Member 3's Resume](#)  
 - [Team Member 4's Resume](#)
