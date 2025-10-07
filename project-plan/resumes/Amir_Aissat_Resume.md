@@ -1,7 +1,7 @@
 # Amir Aissat
 
 aaissat@students.kennesaw.edu | [LinkedIn](https://www.linkedin.com/in/amir-aissat-997b83327/) |
-[GitHub](https://github.com/AmirAissat) | Kennesaw State University — B.S. in Computer Science (Expected May 2027)
+[GitHub](https://github.com/AmirAissat) | Kennesaw State University - B.S. in Computer Science (Expected May 2027)
 
 ## Summary
 Motivated computer science student and strong experience in full-stack web development, computer vision, and AI-powered systems. Passionate about building innovative software solutions and seeking an internship in software engineering or AI development to apply technical and creative problem-solving skills.
