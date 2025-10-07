@@ -24,37 +24,37 @@ Example: “Motivated computer science student with strong experience in full-st
 
 ## Technical Skills
 **Programming Languages:**  
-List your programming languages here — e.g., Java, Python, C++, JavaScript
+List your programming languages here - e.g., Java, Python, C++, JavaScript
 
 **Web Technologies:**  
-List your web tools — e.g., React.js, Node.js, Flask, Express.js, Tailwind CSS
+List your web tools - e.g., React.js, Node.js, Flask, Express.js, Tailwind CSS
 
 **Tools & Frameworks:**  
-List your main tools — e.g., Git, Docker, Postman, VS Code, Agile Methodology
+List your main tools - e.g., Git, Docker, Postman, VS Code, Agile Methodology
 
 **Databases:**  
-List your databases — e.g., MySQL, PostgreSQL, MongoDB
+List your databases - e.g., MySQL, PostgreSQL, MongoDB
 
 ---
 
 ## Education
-**University Name** — *Degree Type, e.g., Bachelor of Science in Computer Science*  
+**University Name** - *Degree Type, e.g., Bachelor of Science in Computer Science*  
 *Expected Graduation: Month Year*  
 - Relevant Coursework: Course 1, Course 2, Course 3
 
 ---
 
 ## Projects
-**Project Name** — *Technologies Used*  
+**Project Name** - *Technologies Used*  
 - One-sentence project overview.  
 - Describe what you built and what tools/languages you used.  
 - Example: “Developed a full-stack application that automates resume screening by analyzing and scoring candidates against job descriptions using AI.”
 
-**Project Name** — *Technologies Used*  
+**Project Name** - *Technologies Used*  
 - Short description of what the project does.  
 - Mention your contribution or what you implemented.  
 
-**Project Name** — *Technologies Used*  
+**Project Name** - *Technologies Used*  
 - Another example project if relevant.  
 - Focus on your skills, results, or what you learned.
 
