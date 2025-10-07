@@ -14,7 +14,7 @@ Copy everything inside the code block below and fill it in with your info.
 ````markdown
 # Full Name
 
-email@example.com | [LinkedIn](https://www.linkedin.com/in/your-linkedin/) | [GitHub](https://github.com/yourusername) | University Name — Degree & Expected Graduation
+email@example.com | [LinkedIn](https://www.linkedin.com/in/your-linkedin/) | [GitHub](https://github.com/yourusername) | University Name - Degree & Expected Graduation
 
 ## Summary
 A short 2–3 sentence professional summary.  
