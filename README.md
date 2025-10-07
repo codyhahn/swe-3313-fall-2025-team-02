@@ -21,6 +21,7 @@ Click on each name to view their resume:
 - [Team Member 2's Resume](#)  
 - [Team Member 3's Resume](#)  
 - [Team Member 4's Resume](#)
+- [Team Member 5's Resume](#)
 
 *(Reminder to Replace the “#” with the actual links once they're uploaded.)*
 
