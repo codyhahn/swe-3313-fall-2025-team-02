@@ -19,7 +19,7 @@ Click on each name to view their resume:
 
 - [Amir Aissat's Resume](https://github.com/codyhahn/swe-3313-fall-2025-team-02/blob/main/project-plan/resumes/Amir_Aissat_Resume.md)    
 - [Jose Orozco-Cruz's Resume](https://github.com/codyhahn/swe-3313-fall-2025-team-02/blob/main/project-plan/resumes/Jose_Orozco-Cruz_Resume.md)  
-- [Team Member 3's Resume](#)  
+- [Levi Weinstein's Resume](https://github.com/codyhahn/swe-3313-fall-2025-team-02/blob/main/project-plan/resumes/Levi_Weinstein_Resume.md)  
 - [Team Member 4's Resume](#)
 - [Team Member 5's Resume](#)
 
