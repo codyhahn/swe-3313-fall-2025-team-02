@@ -23,17 +23,18 @@ Example: “Motivated computer science student with strong experience in full-st
 ---
 
 ## Technical Skills
+
 **Programming Languages:**  
-List your programming languages here - e.g., Java, Python, C++, JavaScript
+Java, Python, SQL, JavaScript, HTML/CSS  
 
 **Web Technologies:**  
-List your web tools - e.g., React.js, Node.js, Flask, Express.js, Tailwind CSS
+React.js, Node.js, Flask, Express.js, Tailwind CSS  
 
 **Tools & Frameworks:**  
-List your main tools - e.g., Git, Docker, Postman, VS Code, Agile Methodology
+Git, Docker, Postman, Vercel, Puter.js, Agile Methodology  
 
 **Databases:**  
-List your databases - e.g., MySQL, PostgreSQL, MongoDB
+PostgreSQL, MySQL, MongoDB
 
 ---
 
