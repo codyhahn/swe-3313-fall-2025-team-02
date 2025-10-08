@@ -5,31 +5,20 @@ chahn10@students.kennesaw.edu | [LinkedIn](https://www.linkedin.com/in/cody-hahn
 ## Summary
 Currently Enrolled at Kennesaw State University, I am passionate about all aspects of software.
 
+
 ---
 
 ## Technical Skills
-**Programming Languages:**
-- C++
-- C#
-- Rust
-- Python
-- Java
-- Javascript/Typescript
 
-**Virtualization & Server Deployment/Management**
-- Docker
-- Proxmox
-- LXD (Ubuntu Server, Arch, Others)
-- VirtualBox
-- QEMU
-- Virt-Manager
-- Hyper-V
+**Programming Languages:**  
+C++, C#, Rust, Python, Java, Javascript/Typescript
 
-**Other Tools & Frameworks:**
-- Git
-- Jupyter
-- Linux
-- OpenBSD
+**Web Technologies:**  
+Docker, Proxmox, LXD (Ubuntu Server, Arch, Others), VirtualBox, QEMU, Virt-Manager, Hyper-V
+
+**Tools & Frameworks:**  
+Git, Jupyter, Linux, OpenBSD 
+
 
 ---
 
