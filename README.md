@@ -30,7 +30,7 @@ Click on each name to view their resume:
 ## Team Assignments
 
 Our ongoing and completed team assignments are organized and accessible here:  
- [View Team Assignments](https://github.com/codyhahn/swe-3313-fall-2025-team-02/edit/main/project-plan/team-assignments/README.md)
+ [View Team Assignments]([https://github.com/codyhahn/swe-3313-fall-2025-team-02/edit/main/project-plan/team-assignments/README.md](https://github.com/codyhahn/swe-3313-fall-2025-team-02/tree/main/project-plan/team-assignments))
 
 
 
