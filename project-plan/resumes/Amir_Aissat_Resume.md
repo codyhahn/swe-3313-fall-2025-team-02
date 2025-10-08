@@ -26,7 +26,7 @@ PostgreSQL, MySQL, MongoDB
 ## Education
 **Kennesaw State University** - *Bachelor of Science in Computer Science*  
 *Expected Graduation: May 2027*  
-- Relevant Coursework: Object-Oriented Programming in Java, Data Structures & Algorithms, Computer Architecture & Organization
+- Relevant Coursework: Object-Oriented Programming in Java, Data Structures & Algorithms, Computer Architecture & Organization, Data Communications, Intro to Database Systems
 ---
 
 ## Projects
