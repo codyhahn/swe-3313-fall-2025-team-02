@@ -52,3 +52,4 @@ Track our project timeline and milestones using our Gantt chart:
 
 
 ## Project Plan Video
+This video outlines our project goals, team roles, timeline, and tools. Watch it [here]()
