@@ -47,7 +47,7 @@ Learn more about our choices here:
 ## Gantt Chart
 
 Track our project timeline and milestones using our Gantt chart:  
-[View Gantt Chart](https://github.com/codyhahn/swe-3313-fall-2025-team-02/blob/main/project-plan/gantt-chart/ganttproject.gan)
+[View Gantt Chart](https://github.com/codyhahn/swe-3313-fall-2025-team-02/blob/main/project-plan/gantt-chart/ganttproject.png)
 
 
 
