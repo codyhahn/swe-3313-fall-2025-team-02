@@ -23,7 +23,7 @@ Click on each name to view their resume:
 - [Geza Martiny's Resume](https://github.com/codyhahn/swe-3313-fall-2025-team-02/blob/main/project-plan/resumes/Geza_Martiny_Resume.md)
 - [Cody Hahn's Resume](https://github.com/codyhahn/swe-3313-fall-2025-team-02/blob/main/project-plan/resumes/Cody_Hahn_Resume.md)
 
-*(Reminder to Replace the “#” with the actual links once they're uploaded.)*
+
 
 
 
