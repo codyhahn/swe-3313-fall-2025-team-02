@@ -15,7 +15,7 @@ Responsible for developing and refining the user interface. They focus on respon
 ---
 
 ## **Back-End Development**
-**[Cody]()** and **[Geza](https://github.com/codyhahn/swe-3313-fall-2025-team-02/blob/main/project-plan/resumes/Geza_Martiny_Resume.md)**  
+**[Cody](https://github.com/codyhahn/swe-3313-fall-2025-team-02/blob/main/project-plan/resumes/Cody_Hahn_Resume.md)** and **[Geza](https://github.com/codyhahn/swe-3313-fall-2025-team-02/blob/main/project-plan/resumes/Geza_Martiny_Resume.md)**  
 Responsible for the server-side architecture, including database design, API endpoints, and core application logic. They ensure system reliability, efficiency, and secure data management.
 
 ---
