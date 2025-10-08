@@ -12,8 +12,7 @@ up to date on advances in technology, both hardware and software. Hoping to get 
 ## Technical Skills
 
 **Programming Languages:**  
-- Java
-- Python 
+Java, Python 
 
 ---
 
