@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2025-10-04" view-index="0" gantt-divider-location="351" resource-divider-location="300" version="3.3.3316" locale="en_US">
+    <description/>
+    <view zooming-state="default:1" id="gantt-chart">
+        <field id="tpd3" name="Name" width="200" order="0"/>
+        <field id="tpd4" name="Begin date" width="75" order="1"/>
+        <field id="tpd5" name="End date" width="75" order="2"/>
+        <field id="tpd15" name="Notes" width="20" order="3"/>
+        <option id="filter.completedTasks" value="false"/>
+        <option id="filter.dueTodayTasks" value="false"/>
+        <option id="filter.overdueTasks" value="false"/>
+        <option id="filter.inProgressTodayTasks" value="false"/>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Name" width="210" order="0"/>
+        <field id="1" name="Default role" width="86" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="2" uid="8934e2ebca8d45ec82514a57fa9f0a58" name="Requirements" meeting="true" start="2025-10-06" duration="0" complete="0" expand="true">
+            <depend id="3" type="2" difference="0" hardness="Strong"/>
+            <task id="7" uid="bf59582ee42e48a0b02943eb428dee53" name="Requirements Analysis and Elicitation" meeting="false" start="2025-10-06" duration="3" complete="0" expand="true">
+                <depend id="10" type="2" difference="0" hardness="Strong"/>
+                <task id="14" uid="f84adbafb4e74029b8d4e4a241d673dd" name="Note Customer Requirements" meeting="false" start="2025-10-06" duration="1" complete="0" expand="true">
+                    <depend id="15" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="15" uid="b25b58cb6e214317a6def650aa1a99df" name="Hold Elicitation Session" meeting="false" start="2025-10-07" duration="1" complete="0" expand="true">
+                    <depend id="16" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="16" uid="b06c3b500d6043ce8fb297b34b88e2f1" name="Consider each requirement as a MUST HAVE, NEEDS TO HAVE or WANTS TO HAVE" meeting="false" start="2025-10-08" duration="1" complete="0" expand="true"/>
+            </task>
+            <task id="10" uid="ebe879f10bd44472a8c9f1b8bfa94570" name="Requirements Writing" meeting="false" start="2025-10-09" duration="1" complete="0" expand="true">
+                <depend id="11" type="2" difference="0" hardness="Strong"/>
+                <task id="17" uid="12258b73b15241fda0f1365b36772ae8" name="Write Requirements for ALL Versions" meeting="false" start="2025-10-09" duration="1" complete="0" expand="true"/>
+            </task>
+            <task id="11" uid="fe0ddb55f4454be68195fd5dc5515a8a" name="Use Case Diagram" meeting="false" start="2025-10-10" duration="1" complete="0" expand="true">
+                <depend id="12" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="12" uid="88a0d1bc21ff410eb7309f67945bc2ce" name="Decision Table" meeting="false" start="2025-10-13" duration="1" complete="0" expand="true">
+                <depend id="13" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="13" uid="97dce82e050c483b8492ee526813d52e" name="Presentation" meeting="false" start="2025-10-14" duration="1" complete="0" expand="true"/>
+        </task>
+        <task id="3" uid="9b56280ddfe548a095370f34786d0117" name="User Interface Design" meeting="true" start="2025-10-15" duration="0" complete="0" expand="true">
+            <depend id="4" type="2" difference="0" hardness="Strong"/>
+            <task id="18" uid="c6466d82e67a4d0f9cf1cb33520148ac" name="Design Login Page" meeting="false" start="2025-10-15" duration="1" complete="0" expand="true">
+                <depend id="19" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="19" uid="97321bbdf9354d29a9065c2464910c5e" name="Design Self-Registration System" meeting="false" start="2025-10-16" duration="1" complete="0" expand="true">
+                <depend id="20" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="20" uid="cdef661c1930472e9bae61a9c9116e9a" name="Design Inventory List" meeting="false" start="2025-10-17" duration="1" complete="0" expand="true">
+                <depend id="21" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="21" uid="bed7127edf2543c982d6a24907e5c6ee" name="Design Shopping Cart" meeting="false" start="2025-10-20" duration="1" complete="0" expand="true">
+                <depend id="22" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="22" uid="159caf1cb71b4aecb29756fa16677bdb" name="Design Checkout" meeting="false" start="2025-10-21" duration="1" complete="0" expand="true">
+                <depend id="23" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="23" uid="780febea8e594ccebd0ee18967d4d126" name="Design Sales Report" meeting="false" start="2025-10-22" duration="1" complete="0" expand="true"/>
+        </task>
+        <task id="4" uid="3b0109484d5c4428b0480795b364b96c" name="Technical Design" meeting="true" start="2025-10-23" duration="0" complete="0" expand="true">
+            <depend id="5" type="2" difference="0" hardness="Strong"/>
+            <task id="25" uid="8fd1d041b5324efaabc953ae90dc797a" name="Assess Implementation Language" meeting="false" start="2025-10-23" duration="1" complete="0" expand="true">
+                <depend id="26" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="26" uid="c6f504fa15004d528f94b0e64d3efaf8" name="Assess Implementation Framework" meeting="false" start="2025-10-24" duration="1" complete="0" expand="true">
+                <depend id="27" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="27" uid="27524e4eaebb466cb0f2e40083579dab" name="Create Entity Relationship Diagram" meeting="false" start="2025-10-27" duration="1" complete="0" expand="true"/>
+        </task>
+        <task id="5" uid="8c8b550bb4eb4fb284662c5306837016" name="Implementation and Final Presentation" meeting="true" start="2025-10-28" duration="0" complete="0" expand="true">
+            <task id="28" uid="9735b3aabd2a413ba2f1090a60fa7b45" name="Frontend" meeting="false" start="2025-10-29" duration="5" complete="0" expand="true">
+                <task id="33" uid="ea90b8a87eaa4e418503d7f48c74b964" name="Login Page" meeting="false" start="2025-10-29" duration="1" complete="0" expand="true">
+                    <depend id="34" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="34" uid="f0dd1840673040e598c9fadfba3f55a1" name="Self-Registration Page" meeting="false" start="2025-10-30" duration="1" complete="0" expand="true">
+                    <depend id="36" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="35" uid="84e6313600ec466e9e4aa2ee20033f91" name="Inventory Page" meeting="false" start="2025-10-30" duration="1" complete="0" expand="true">
+                    <depend id="36" type="2" difference="0" hardness="Strong"/>
+                    <depend id="38" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="36" uid="5fceb3efec1f4f61afb8c2af36cb4458" name="Shopping Cart Page" meeting="false" start="2025-10-31" duration="1" complete="0" expand="true">
+                    <depend id="37" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="37" uid="7d1d0139ebfd4fd1b47fb18ee70f9e40" name="Checkout Page" meeting="false" start="2025-11-03" duration="1" complete="0" expand="true">
+                    <depend id="45" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="38" uid="00d8e18f8a66418387ee64f4b65acde8" name="Sales Report Page" meeting="false" start="2025-10-31" duration="1" complete="0" expand="true">
+                    <depend id="45" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="45" uid="03d3f3f8da004516ae1e3829b862ead0" name="Final/General Integration" meeting="false" start="2025-11-04" duration="1" complete="0" expand="true"/>
+            </task>
+            <task id="29" uid="26a49faba5a545be88bcccc20d7f3a42" name="Backend" meeting="false" start="2025-10-28" duration="3" complete="0" expand="true">
+                <task id="39" uid="b02c011407c7426fbfcb5a2e6fe66fd6" name="Inventory System" meeting="false" start="2025-10-29" duration="1" complete="0" expand="true">
+                    <depend id="35" type="2" difference="0" hardness="Strong"/>
+                    <depend id="41" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="40" uid="1c7a149f492c4898a4284441d16dcf65" name="Database" meeting="false" start="2025-10-28" duration="1" complete="0" expand="true">
+                    <depend id="39" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="41" uid="af352b42f6e0401499cd33b1cc98d1ae" name="Frontend Integration" meeting="false" start="2025-10-30" duration="1" complete="0" expand="true">
+                    <depend id="45" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="42" uid="16be59bad47942f0a340bd8202fedebd" name="Login System" meeting="false" start="2025-10-28" duration="1" complete="0" expand="true">
+                    <depend id="33" type="2" difference="0" hardness="Strong"/>
+                    <depend id="43" type="2" difference="0" hardness="Strong"/>
+                    <depend id="44" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="43" uid="8b1bf08e9e3a46f7bfaf9bad88987fe5" name="Administrator System" meeting="false" start="2025-10-29" duration="1" complete="0" expand="true">
+                    <depend id="41" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="44" uid="64b5090471f4405b88de7a4973744d19" name="Payment System" meeting="false" start="2025-10-29" duration="1" complete="0" expand="true">
+                    <depend id="41" type="2" difference="0" hardness="Strong"/>
+                </task>
+            </task>
+        </task>
+    </tasks>
+    <resources/>
+    <allocations/>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+</project>
