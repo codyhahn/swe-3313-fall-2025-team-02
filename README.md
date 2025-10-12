@@ -54,3 +54,20 @@ Track our project timeline and milestones using our Gantt chart:
 
 ## Project Plan Video
 This video outlines our project goals, team roles, timeline, and tools. Watch it [here](https://www.loom.com/share/20bb22703bdb45ee9702bdfa251c97ff)
+
+## Requirements
+
+Our e-commerce platform will allow users to register, log in, browse a curated collection of rare artifacts and one-of-a-kind paintings, add items to their cart, and complete secure purchases with validated payment and shipping information. The system will display accurate pricing, apply tax and shipping costs, and generate digital receipts after each order. Administrators will have enhanced privileges to manage inventory, update listings, view and export sales reports, and oversee transactions. The platform will maintain a clean, intuitive interface and ensure accuracy, security, and a smooth experience for both users and admins.
+
+The detailed requirements derived from our design discussions are listed [here]().
+
+
+### Use Case Diagram
+- Click [here]() for a detailed Use-Case Diagram of our e-commerce system.
+
+### Decision Table
+- Click [here]() for a detailed view of our Decision Table outlining all major processes.
+
+### Presentation
+- Click [here]() to view our Requirements Presentation.
+
