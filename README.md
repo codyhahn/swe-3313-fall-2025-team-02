@@ -59,7 +59,7 @@ This video outlines our project goals, team roles, timeline, and tools. Watch it
 
 Our e-commerce platform will allow users to register, log in, browse a curated collection of rare artifacts and one-of-a-kind paintings, add items to their cart, and complete secure purchases with validated payment and shipping information. The system will display accurate pricing, apply tax and shipping costs, and generate digital receipts after each order. Administrators will have enhanced privileges to manage inventory, update listings, view and export sales reports, and oversee transactions. The platform will maintain a clean, intuitive interface and ensure accuracy, security, and a smooth experience for both users and admins.
 
-The detailed requirements derived from our design discussions are listed [here]().
+The detailed requirements derived from our design discussions are listed [here](https://github.com/codyhahn/swe-3313-fall-2025-team-02/blob/main/requirements/README.md).
 
 
 ### Use Case Diagram
