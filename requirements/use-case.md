@@ -1,3 +1,3 @@
 # Use-Case Diagram
 
-<img width="425" height="779" alt="image" src="https://github.com/user-attachments/assets/920b4341-75ce-4c28-a315-6c3a446f9aae" />
+<img width="426" height="787" alt="image" src="https://github.com/user-attachments/assets/85d7aa7c-9d09-4e04-92fe-d8f0e0f44b8e" />
