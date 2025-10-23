@@ -63,7 +63,7 @@ The detailed requirements derived from our design discussions are listed [here](
 
 
 ### Use Case Diagram
-- Click [here](https://github.com/codyhahn/swe-3313-fall-2025-team-02/blob/main/requirements/use-case.md) for a detailed Use-Case Diagram of our e-commerce system.
+- Click [here](/codyhahn/swe-3313-fall-2025-team-02/blob/main/requirements/use-case.md) for a detailed Use-Case Diagram of our e-commerce system.
 
 ### Decision Table
 - Click [here](https://github.com/codyhahn/swe-3313-fall-2025-team-02/blob/main/requirements/decision-table.md) for a detailed view of our Decision Table outlining all major processes.
