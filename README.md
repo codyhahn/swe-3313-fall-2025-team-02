@@ -17,11 +17,11 @@ Our goal is to create a sleek, intuitive platform where users can explore, learn
 Meet the team behind *Is a Hotdog a Sandwich*!  
 Click on each name to view their resume:
 
-- [Amir Aissat's Resume](https://github.com/codyhahn/swe-3313-fall-2025-team-02/blob/main/project-plan/resumes/Amir_Aissat_Resume.md)    
-- [Jose Orozco-Cruz's Resume](https://github.com/codyhahn/swe-3313-fall-2025-team-02/blob/main/project-plan/resumes/Jose_Orozco-Cruz_Resume.md)  
-- [Levi Weinstein's Resume](https://github.com/codyhahn/swe-3313-fall-2025-team-02/blob/main/project-plan/resumes/Levi_Weinstein_Resume.md)  
-- [Geza Martiny's Resume](https://github.com/codyhahn/swe-3313-fall-2025-team-02/blob/main/project-plan/resumes/Geza_Martiny_Resume.md)
-- [Cody Hahn's Resume](https://github.com/codyhahn/swe-3313-fall-2025-team-02/blob/main/project-plan/resumes/Cody_Hahn_Resume.md)
+- [Amir Aissat's Resume](project-plan/resumes/Amir_Aissat_Resume.md)    
+- [Jose Orozco-Cruz's Resume](project-plan/resumes/Jose_Orozco-Cruz_Resume.md)  
+- [Levi Weinstein's Resume](project-plan/resumes/Levi_Weinstein_Resume.md)  
+- [Geza Martiny's Resume](project-plan/resumes/Geza_Martiny_Resume.md)
+- [Cody Hahn's Resume](project-plan/resumes/Cody_Hahn_Resume.md)
 
 
 
@@ -30,7 +30,7 @@ Click on each name to view their resume:
 ## Team Assignments
 
 Our ongoing and completed team assignments are organized and accessible here:  
- [View Team Assignments](https://github.com/codyhahn/swe-3313-fall-2025-team-02/blob/main/project-plan/team-assignments/README.md)
+ [View Team Assignments](project-plan/team-assignments/README.md)
 
 
 
@@ -40,14 +40,14 @@ We selected **Python**, **Flask**, and **SQLite** for this project because of th
 This combination enables quick development, clear data management, and easy deployment.
 
 Learn more about our choices here:  
-[Technology Selection](https://github.com/codyhahn/swe-3313-fall-2025-team-02/blob/main/project-plan/technology-selection/README.md)
+[Technology Selection](project-plan/technology-selection/README.md)
 
 
 
 ## Gantt Chart
 
 Track our project timeline and milestones using our Gantt chart:  
-[View Gantt Chart](https://github.com/codyhahn/swe-3313-fall-2025-team-02/blob/main/project-plan/gantt-chart/ganttproject.png)
+[View Gantt Chart](project-plan/gantt-chart/ganttproject.png)
 
 
 
@@ -59,14 +59,14 @@ This video outlines our project goals, team roles, timeline, and tools. Watch it
 
 Our e-commerce platform will allow users to register, log in, browse a curated collection of rare artifacts and one-of-a-kind paintings, add items to their cart, and complete secure purchases with validated payment and shipping information. The system will display accurate pricing, apply tax and shipping costs, and generate digital receipts after each order. Administrators will have enhanced privileges to manage inventory, update listings, view and export sales reports, and oversee transactions. The platform will maintain a clean, intuitive interface and ensure accuracy, security, and a smooth experience for both users and admins.
 
-The detailed requirements derived from our design discussions are listed [here](https://github.com/codyhahn/swe-3313-fall-2025-team-02/blob/main/requirements/README.md).
+The detailed requirements derived from our design discussions are listed [here](requirements/README.md).
 
 
 ### Use Case Diagram
 - Click [here](requirements/use-case.md) for a detailed Use-Case Diagram of our e-commerce system.
 
 ### Decision Table
-- Click [here](https://github.com/codyhahn/swe-3313-fall-2025-team-02/blob/main/requirements/decision-table.md) for a detailed view of our Decision Table outlining all major processes.
+- Click [here]() for a detailed view of our Decision Table outlining all major processes.
 
 ### Presentation
 - Click [here]() to view our Requirements Presentation.
