@@ -9,6 +9,6 @@
 
 ---
 
-## Code Output Screenshot
+## Code Screenshot
 
 ![Code Output](./code-screenshot.png)
