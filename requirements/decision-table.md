@@ -4,8 +4,7 @@
 
 ---
 
-### **Decision Table Demo Code**
-[Decision Table Demo Code](./decision-table-code-demo.py)
+### **[Decision Table Demo Code](./decision-table-code-demo.py)** ###
 
 ---
 
