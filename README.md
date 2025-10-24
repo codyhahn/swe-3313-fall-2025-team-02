@@ -69,5 +69,5 @@ The detailed requirements derived from our design discussions are listed [here](
 - Click [here](requirements/decision-table.md) for a detailed view of our Decision Table outlining all major processes.
 
 ### Presentation
-- Click [here]() to view our Requirements Presentation.
+- Click [here](https://www.loom.com/share/02c6e6e10875489b9e7b93d217c79dd7) to view our Requirements Presentation.
 
