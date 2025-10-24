@@ -66,7 +66,7 @@ The detailed requirements derived from our design discussions are listed [here](
 - Click [here](requirements/use-case.md) for a detailed Use-Case Diagram of our e-commerce system.
 
 ### Decision Table
-- Click [here]() for a detailed view of our Decision Table outlining all major processes.
+- Click [here](requirements/decision-table.md) for a detailed view of our Decision Table outlining all major processes.
 
 ### Presentation
 - Click [here]() to view our Requirements Presentation.
