@@ -71,3 +71,8 @@ The detailed requirements derived from our design discussions are listed [here](
 ### Presentation
 - Click [here](https://www.loom.com/share/02c6e6e10875489b9e7b93d217c79dd7) to view our Requirements Presentation.
 
+## User Interface Design
+Explore the current design and see the user flow in action.
+- [High Fidelity User Interface Design (Marvel)](https://marvelapp.com/prototype/11djd1j1)
+- Loom Video: [Click Here]()
+
