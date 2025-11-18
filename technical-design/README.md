@@ -18,7 +18,7 @@
 
 Our project is implemented primarily in:
 
-- **Python 3.x**
+- **Python 3.14.0**
   - Backend logic using Flask
   - Routing, input validation, and business rules
   - Database access and data manipulation
@@ -89,7 +89,6 @@ We will:
 ### Tables used:
 
 - `users`
-- `categories`
 - `products`
 - `carts`
 - `cart_items`
@@ -104,7 +103,6 @@ We will:
 erDiagram
     USER ||--o{ CART : "owns"
     USER ||--o{ ORDER : "places"
-    CATEGORY ||--o{ PRODUCT : "categorizes"
     PRODUCT ||--o{ CART_ITEM : "appears_in"
     PRODUCT ||--o{ ORDER_ITEM : "appears_in"
     CART ||--o{ CART_ITEM : "contains"
@@ -118,12 +116,6 @@ erDiagram
         string last_name
         string role
         datetime created_at
-    }
-
-    CATEGORY {
-        int id
-        string name
-        string description
     }
 
     PRODUCT {
@@ -187,14 +179,6 @@ erDiagram
 | last_name     | TEXT     | 50 chars           | Yes      |             | Last name             |
 | role          | TEXT     | `admin`/`customer` | Yes      |             | Authorization role    |
 | created_at    | DATETIME | timestamp          | Yes      |             | Account creation time |
-
-
-# Category
-| Field       | SQL Type | Size | Required | Key         | Description          |
-| ----------- | -------- | ---- | -------- | ----------- | -------------------- |
-| id          | INTEGER  |      | Yes      | Primary Key | Unique category ID   |
-| name        | TEXT     | 50   | Yes      | Unique      | Category name        |
-| description | TEXT     | 255  | No       |             | Optional description |
 
 
 # Product
@@ -261,20 +245,13 @@ erDiagram
 | 2  | collector@example.com| Alex       | Collector | customer | 2025-09-05T14:30:00Z |
 | 3  | artlover@example.com   | Jamie      | Rivera    | customer | 2025-09-07T09:15:00Z |
 
-# Category
-| id | name       | description                 |
-| -- | ---------- | --------------------------- |
-| 1  | Artifacts  | Historical objects          |
-| 2  | Paintings  | Original and limited prints |
-| 3  | Sculptures | 3D art pieces               |
-
 # Product
-| id | name                  | price  | category_id | is_active |
-| -- | --------------------- | ------ | ----------- | --------- |
-| 1  | Ancient Bronze Coin   | 399.99 |  1           | 1         |
-| 2  | Renaissance Portrait  | 1299.0 |  2           | 1         |
-| 3  | Marble Bust Sculpture | 899.5  |  3           | 1         |
-| 4  | Vintage Map of Europe | 249.0  |  1           | 1         |
+| id | name                  | price  | is_active |
+| -- | --------------------- | ------ | --------- |
+| 1  | Ancient Bronze Coin   | 399.99 |   1       |
+| 2  | Renaissance Portrait  | 1299.0 |   1       |
+| 3  | Marble Bust Sculpture | 899.5  |   1       |
+| 4  | Vintage Map of Europe | 249.0  |   1       |
 
 ## Cart
 | id | user_id | created_at           | updated_at           |
@@ -307,7 +284,6 @@ erDiagram
 | Entity     | Seeded?  | Purpose                        |
 | ---------- | -------- | ------------------------------ |
 | USER       | Yes      | Admin + demo accounts          |
-| CATEGORY   | Yes      | Initial category structure     |
 | PRODUCT    | Yes      | Initial inventory              |
 | CART       | No       | Created at runtime             |
 | CART_ITEM  | No       | Created when users add to cart |
@@ -320,13 +296,6 @@ erDiagram
 | 1  | [admin@example.com](mailto:admin@example.com) | admin    |
 | 2  | [demo@example.com](mailto:demo@example.com)   | customer |
 
-# Category Seed Data
-| id | name       |
-| -- | ---------- |
-| 1  | Artifacts  |
-| 2  | Paintings  |
-| 3  | Sculptures |
-
 # Product Seed Data
 | id | name                  | price  |  category_id |
 | -- | --------------------- | ------ |  ----------- |
@@ -336,6 +305,152 @@ erDiagram
 
 ## Authentication and Authorization Plan
 
+Authentication verifies **who** the user is.  
+Authorization determines **what** the user is allowed to do.
+
+---
+
+### Authentication
+
+We authenticate users using their email and password stored in the `USER` table.
+
+**Authentication Flow:**
+
+- User enters email and password into the login form.
+- Backend retrieves the user by email.
+- Password verification:
+  - `werkzeug.security.check_password_hash(stored_hash, provided_password)`
+- If valid:
+  - `session["user_id"] = user.id`
+  - `session["role"] = user.role`
+- If invalid:
+  - Return login error message.
+- Logging out:
+  - Clears `session["user_id"]` and `session["role"]`.
+
+**Example Login Code:**
+
+```python
+from werkzeug.security import check_password_hash
+from flask import session, redirect, request
+
+def login():
+    email = request.form["email"]
+    password = request.form["password"]
+
+    user = get_user_by_email(email)
+    if user and check_password_hash(user.password_hash, password):
+        session["user_id"] = user.id
+        session["role"] = user.role
+        return redirect("/dashboard")
+    return "Invalid login credentials"
+```
+# Authorization
+
+We use role-based access control based on the `role` field in the `USER` table.
+
+### Roles
+
+**customer**
+- Browse products  
+- Manage cart  
+- Checkout  
+- View *their own* orders  
+
+**admin**
+- Manage products and categories  
+- View *all* orders  
+- Access the admin dashboard  
+
+---
+
+### Route Protection
+
+```python
+from functools import wraps
+from flask import session, redirect
+
+def login_required(view):
+    @wraps(view)
+    def wrapper(*args, **kwargs):
+        if "user_id" not in session:
+            return redirect("/login")
+        return view(*args, **kwargs)
+    return wrapper
+
+def admin_required(view):
+    @wraps(view)
+    def wrapper(*args, **kwargs):
+        if session.get("role") != "admin":
+            return redirect("/")
+        return view(*args, **kwargs)
+    return wrapper
+```
+# Examples
+
+```python
+@app.route("/admin/products")
+@admin_required
+def admin_products():
+
+@app.route("/cart")
+@login_required
+def view_cart():
+
+```
+## Coding Style Guide
+
+### Python Style
+
+- Follow **PEP 8**: https://peps.python.org/pep-0008/  
+- Variable & function names: **snake_case**  
+- Classes: **PascalCase**  
+- Use meaningful, descriptive names  
+- Keep functions short and modular  
+- Use docstrings on non-trivial functions  
+- Avoid logic inside templates: keep business logic in Python  
+- Organize project into modular files such as:
+  - `auth.py`
+  - `shop.py`
+  - `admin.py`
+  - `database.py`
+
+---
+
+### HTML / CSS / JS Style
+
+- Use **semantic HTML** (`<header>`, `<section>`, `<main>`)  
+- Avoid inline CSS; use external stylesheet files  
+- Use clear, descriptive CSS class names  
+  - Example: `.product-card`, `.order-summary`  
+- Keep JavaScript functions short and focused  
+- Use JavaScript only for interactivity and form validation  
+
+---
+
+### SQL / Database Style
+
+- Table names: **snake_case**, plural  
+  - Example: `users`, `orders`, `products`  
+- Foreign keys follow the pattern: **<table>_id**
+  - Example: `user_id`, `product_id`  
+- Required fields must use `NOT NULL`  
+- Primary keys are always named `id`  
+- Maintain consistent naming conventions across all entities  
+
+---
+
+### Git / Source Control Style
+
+- Branch naming conventions:
+  - `feature/<short-description>`
+  - `bugfix/<short-description>`
+- The `main` branch stays stable and deployment-ready  
+- Commit messages must be descriptive:
+  - `add checkout route`
+  - `fix product stock update bug`
+- Commit frequently in small, meaningful units  
+- Use pull requests for team review before merging  
 
 
 
