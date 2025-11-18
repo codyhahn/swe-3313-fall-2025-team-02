@@ -76,3 +76,9 @@ Explore the current design and see the user flow in action.
 - [High Fidelity User Interface Design (Marvel)](https://marvelapp.com/prototype/11djd1j1)
 - Loom Video: [Click Here](https://www.loom.com/share/e6828bdc2c094023aec7c7a26c5e4bde)
 
+## Technical Design
+
+This section outlines the underlying architecture, technologies, data structures, and patterns used to implement the project. It serves as a reference for developers and stakeholders seeking insight into how the system functions behind the scenes.
+
+[Technical Design](./technical-design/README.md)
+
