@@ -84,3 +84,7 @@ This section outlines the underlying architecture, technologies, data structures
 
 ## Implementation
 - Click [here](implementation/README.md) to view the README with instructions for running the application.
+
+## Final Presentation
+- [1st Video (5 mins)](https://www.loom.com/share/9da453729d294f48ad5d0beb109346dd)
+- [2nd Video (1 min)](https://www.loom.com/share/426b5aee32794668843af7f9e386cb40)
