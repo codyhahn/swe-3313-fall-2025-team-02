@@ -82,3 +82,5 @@ This section outlines the underlying architecture, technologies, data structures
 
 [Technical Design](./technical-design/README.md)
 
+## Implementation
+- Click [here](implementation/README.md) to view the README with instructions for running the application.
