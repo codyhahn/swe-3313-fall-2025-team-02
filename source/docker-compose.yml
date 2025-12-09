@@ -3,8 +3,8 @@ services:
     build: .
     ports:
       - "5000:5000"
-    env_file:
-      - .env
+    #env_file: this is not required for docker to run, it has default keys so you dont need a .env file.
+     # - .env
     environment:
       SECRET_KEY: ${SECRET_KEY:-defaultsecret}
       DATABASE_URL: ${DATABASE_URL:-sqlite:///aurum/instance/app.db}
