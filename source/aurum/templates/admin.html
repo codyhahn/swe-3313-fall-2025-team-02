@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aurum Admin Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="lux-navbar">
+  <div class="brand">Aurum Admin</div>
+  <nav class="nav-right">
+    <ul>
+      <li><a href="{{ url_for('shop.home') }}">Storefront</a></li>
+      <li><a href="{{ url_for('auth.logout') }}" id="logout-btn">Logout</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="admin-container">
+  <h1>Admin Dashboard</h1>
+  <p>Manage sales reports and your product listings.</p>
+
+  <section class="sales-report">
+    <h2>Sales Report</h2>
+    <table id="salesTable">
+      <thead>
+        <tr>
+          <th>Order ID</th>
+          <th>Date</th>
+          <th>Customer</th>
+          <th>Total</th>
+          <th>Shipping</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% if sales and sales|length > 0 %}
+          {% for sale in sales %}
+          <tr>
+            <td>{{ sale.id }}</td>
+            <td>{{ sale.created_at }}</td>
+            <td>{{ sale.customer_name }}</td>
+            <td>${{ "%.2f"|format(sale.total) }}</td>
+            <td>${{ "%.2f"|format(sale.shipping) }}</td>
+          </tr>
+          {% endfor %}
+        {% else %}
+          <tr>
+            <td colspan="5" style="text-align:center;">No sales recorded yet.</td>
+          </tr>
+        {% endif %}
+      </tbody>
+    </table>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 Aurum Gallery Admin Panel</p>
+</footer>
+
+<script src="{{ url_for('static', filename='js/admin.js') }}"></script>
+</body>
+</html>

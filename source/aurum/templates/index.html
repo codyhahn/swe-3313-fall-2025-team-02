@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aurum Gallery - Login</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@300;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Your main landing/parallax styles -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<header class="lux-navbar">
+  <div class="brand">Aurum Gallery</div>
+
+  <div class="nav-right">
+    <ul>
+      <!-- Stay on this page, just scroll to hero -->
+      <li><a href="#home">Home</a></li>
+    </ul>
+
+    <button class="btn-login fancy">
+      <span class="top-key"></span>
+      <a href="#login-section" class="login-link">Login</a>
+      <span class="bottom-key-1"></span>
+      <span class="bottom-key-2"></span>
+    </button>
+
+  </div>
+</header>
+
+
+<section id="home" class="hero lux-hero">
+  <div class="hero-content">
+    <h2>Discover rare art pieces curated for the bold.</h2>
+    <p>Each piece tells a story - timeless, authentic, and waiting to be found.</p>
+    <p>Scroll down to view our Gallery</p>
+  </div>
+</section>
+
+<section id="shape-the-future" class="hero">
+
+  <div class="external">
+    <div class="horizontal-scroll-wrapper">
+      <div class="img-wrapper slower">
+        <a>
+          <img src="{{ url_for('static', filename='images/1.jpg') }}" alt="">
+        </a>
+      </div>
+
+      <div class="img-wrapper faster">
+        <a>
+          <img src="{{ url_for('static', filename='images/2.jpg') }}" alt="">
+        </a>
+      </div>
+
+      <div class="img-wrapper slower vertical">
+        <a>
+          <img src="{{ url_for('static', filename='images/3.jpg') }}" alt="">
+        </a>
+      </div>
+
+      <div class="img-wrapper slower slower-down">
+        <a>
+          <img src="{{ url_for('static', filename='images/4.jpg') }}" alt="">
+        </a>
+      </div>
+
+      <div class="img-wrapper">
+        <a>
+          <img src="{{ url_for('static', filename='images/5.jpg') }}" alt="">
+        </a>
+      </div>
+
+      <div class="img-wrapper slower">
+        <a>
+          <img src="{{ url_for('static', filename='images/6.jpg') }}" alt="">
+        </a>
+      </div>
+
+      <div class="img-wrapper faster1">
+        <a>
+          <img src="{{ url_for('static', filename='images/7.jpg') }}" alt="">
+        </a>
+      </div>
+      
+      <div class="img-wrapper slower slower2">
+        <a>
+          <img src="{{ url_for('static', filename='images/8.jpg') }}" alt="">
+        </a>
+      </div>
+      
+      <div class="img-wrapper slower">
+        <a>
+          <img src="{{ url_for('static', filename='images/9.jpg') }}" alt="">
+        </a>
+      </div>
+      
+      <div class="img-wrapper slower">
+        <a>
+          <img src="{{ url_for('static', filename='images/10.jpg') }}" alt="">
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr id="shape-the-future-end" />
+
+
+<main>
+  <!-- Login / Register Section -->
+  <section id="login-section">
+    <div class="container" id="container">
+      <!-- ---------- SIGN UP ---------- -->
+      <div class="form-container sign-up-container">
+        <form id="signup-form" method="POST" action="{{ url_for('auth.register') }}">
+          <h1>Create Account</h1>
+          <span>Use your email for registration</span>
+          <input type="text" id="signup-name" name="signup-name" placeholder="Name" />
+          <input type="email" id="signup-email" name="signup-email" placeholder="Email" />
+          <input type="password" id="signup-password" name="signup-password" placeholder="Password" />
+          <button type="submit">Sign Up</button>
+        </form>
+      </div>
+
+      <!-- ---------- SIGN IN ---------- -->
+      <div class="form-container sign-in-container">
+        <form id="signin-form" method="POST" action="{{ url_for('auth.login') }}">
+          <h1>Sign in</h1>
+          <span>Use your account</span>
+          <input type="email" id="signin-email" name="signin-email" placeholder="Email" />
+          <input type="password" id="signin-password" name="signin-password" placeholder="Password" />
+          <button type="submit">Sign In</button>
+        </form>
+      </div>
+
+      <div class="overlay-container">
+        <div class="overlay">
+          <div class="overlay-panel overlay-left">
+            <h1>Welcome Back!</h1>
+            <p>To keep connected with us please login with your personal info</p>
+            <button class="ghost" id="signIn">Sign In</button>
+          </div>
+          <div class="overlay-panel overlay-right">
+            <h1>Hello, Friend!</h1>
+            <p>Enter your personal details and start journey with us</p>
+            <button class="ghost" id="signUp">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+   
+<div class="warning">
+   <p>Your browser does not support scroll-driven animations. <br />Please try Chrome, Edge or Opera.</p>
+</div>
+
+
+<svg xmlns="http://www.w3.org/2000/svg" 
+     focusable="false" aria-hidden="true">
+   <symbol viewBox="0 0 31.49 31.49" id="arrow">
+      <path d="M21.2 5a1.11 1.11 0 0 0-1.58 0 1.12 1.12 0 0 0 
+         0 1.58l8.04 8.04H1.11c-.62 0-1.11.5-1.11 1.12 0 
+         .62.5 1.12 1.11 1.12h26.55l-8.04 8.04a1.14 1.14 
+         0 0 0 0 1.58 1.1 1.1 0 0 0 1.58 0l9.96-9.95a1.1 
+         1.1 0 0 0 0-1.57L21.2 5.01z" />
+   </symbol>
+   <symbol>
+      <clipPath id="blob" clipPathUnits="objectBoundingBox">
+         <path d="M0.8338,0.1121c0.0818,0.0416,0.1468,0.1134,0.1623,
+             0.1922c0.0158,0.0788-0.0178,0.1642-0.0397,
+             0.2459c-0.0216,0.0819-0.0316,0.1598-0.0652,
+             0.2489c-0.0338,0.089-0.0909,0.1882-0.1696,
+             0.1995c-0.0789,0.0115-0.1794-0.065-0.2937
+             -0.096c-0.1147-0.0312-0.2437-0.0172-0.3109
+             -0.065c-0.0674-0.0478-0.0726-0.1574-0.0887
+             -0.2649c-0.0158-0.1076-0.0412-0.2135-0.0201
+             -0.3188c0.0208-0.1054,0.0886-0.2096,0.1875
+             -0.2447c0.0986-0.0351,0.2551-0.0011,0.3824,
+             0.0221C0.6536,0.0593,0.7519,0.0703,0.8338,0.1121z"/>
+      </clipPath>   
+   </symbol>
+</svg>
+
+
+<script src="{{ url_for('static', filename='js/login.js') }}"></script>
+
+</body>
+</html>

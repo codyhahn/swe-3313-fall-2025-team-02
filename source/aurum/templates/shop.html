@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aurum Gallery - Shop</title>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/shop.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header class="lux-navbar">
+    <div class="brand">Aurum Gallery</div>
+    <nav class="nav-right">
+      <ul>
+        <li><a href="{{ url_for('shop.home') }}">Home</a></li>
+        <li><a href="{{ url_for('shop.home') }}#contact">Contact</a></li>
+        <li><a href="{{ url_for('shop.cart') }}" class="cart-link">Cart (0)</a></li>
+
+        {% if session.get('role') == 'admin' %}
+        <li><a href="{{ url_for('admin.sales_report') }}">Admin Dashboard</a></li>
+        {% endif %}
+        <li><a href="{{ url_for('auth.logout') }}" class="logout-btn">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- SHOP HEADER -->
+  <section class="shop-header">
+    <div class="shop-intro">
+      <h1>The Collection</h1>
+      <p>Explore our curated selection of timeless artwork and luxury pieces.</p>
+
+      <!-- SEARCH BAR -->
+      <div class="search-bar">
+        <input id="searchInput" type="text" placeholder="Search artworks, eras, or prices..." />
+        <button>Search</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCT GRID -->
+  <section class="product-gallery">
+    <div class="gallery-grid">
+
+      {% for item in items %}
+      <div class="art-card" data-id="{{ item.id }}">
+        <img src="{{ url_for('static', filename='images/' + item.image) }}" alt="{{ item.title }}">
+        
+        <h3>{{ item.title }}</h3>
+        <p class="era"><em>{{ item.era }}</em></p>
+        <p class="price">${{ "%.2f"|format(item.price) }}</p>
+
+        <button class="examine-btn">Examine</button>
+      </div>
+      {% endfor %}
+
+      {% if items|length == 0 %}
+      <p class="no-items">All artwork has been sold. Please check back later.</p>
+      {% endif %}
+
+    </div>
+  </section>
+
+  <!-- PRODUCT DETAIL MODAL -->
+  <div id="productModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <div class="modal-body">
+        <div class="modal-image">
+          <img id="modalImage" src="" alt="">
+        </div>
+        <div class="modal-info">
+          <h2 id="modalTitle"></h2>
+          <p id="modalEra"></p>
+          <p id="modalPrice"></p>
+          <p id="modalDescription"></p>
+          <p id="modalProvenance"></p>
+          <button id="modalAddCart" class="add-cart-btn">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="cart-popup" class="cart-popup">Item added to cart!</div>
+
+  <footer>
+    <p>&copy; 2025 Aurum Gallery. All rights reserved.</p>
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/shop.js') }}"></script>
+</body>
+</html>

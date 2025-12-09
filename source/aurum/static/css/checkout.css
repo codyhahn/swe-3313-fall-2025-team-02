@@ -1,0 +1,393 @@
+body {
+  font-family: 'Inter', sans-serif;
+  background: radial-gradient(circle at center, #fffdf9 0%, #f4eee5 100%);
+  margin: 0;
+  color: #1a1a1a;
+}
+
+/* ---------- IMPROVED RESPONSIVE LUXURY NAVBAR ---------- */
+.lux-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background: rgba(0, 0, 0, 0.96);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5vw;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+/* brand logo/name */
+.lux-navbar .brand {
+  font-family: "Playfair Display", serif;
+  font-size: 1.4rem;
+  color: #fff;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+/* nav container */
+.nav-right ul {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* nav links */
+.nav-right a {
+  text-decoration: none;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+}
+
+.nav-right a:hover {
+  color: #c2a68d;
+}
+
+/* adjust padding for smaller screens */
+@media (max-width: 900px) {
+  .nav-right ul {
+    gap: 1.2rem;
+  }
+  .lux-navbar {
+    padding: 0 3vw;
+  }
+}
+
+/* handle narrow screens (tablet/mobile) */
+@media (max-width: 700px) {
+  .lux-navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem 0;
+  }
+  .nav-right ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .lux-navbar .brand {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.lux-navbar a:hover {
+  color: #d4af37;
+}
+
+/* ---------- CHECKOUT CONTAINER ---------- */
+.checkout-container {
+  padding: 8rem 10vw 5rem;
+}
+
+.checkout-container h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.checkout-intro {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #555;
+}
+
+.checkout-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr; /* make the form smaller */
+  gap: 2rem;
+  justify-content: center;
+  max-width: 1000px; /* overall container width limit */
+  margin: 0 auto;
+}
+
+
+.checkout-form {
+  background: #f9f7f3;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+
+
+
+.checkout-form h3 {
+  font-family: "Playfair Display", serif;
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+input {
+  width: 70%;             /* shorter width */
+  max-width: 420px;       /* prevent stretching on large screens */
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin: 0.3rem auto 1rem;  /* centers each box */
+  font-size: 0.9rem;
+       
+}
+
+
+/* ----- FORM ROW FIX (EXP + CVV) ----- */
+.form-row {
+  display: flex;
+  flex-direction: row;   /* stack Expiration and CVV vertically */
+  align-items: flex-start;  /* align to the left */
+  gap: 1rem;                /* spacing between Expiration and CVV */
+  margin-top: 1rem;
+}
+
+.form-row label {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.form-row input {
+  width: 60%;               /* smaller width for these fields only */
+  max-width: 220px;         /* optional cap for large screens */
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+
+
+.complete-btn {
+  background: #1a1a1a;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 1rem 2.5rem;
+  margin-top: 2rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.complete-btn:hover {
+  background: #8b6b4a;
+  transform: translateY(-2px);
+}
+
+
+
+/* ---------- ORDER SUMMARY ---------- */
+.order-summary {
+  background: #f1ede7;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  height: fit-content;
+}
+
+.order-summary h3 {
+  font-family: "Playfair Display", serif;
+  margin-bottom: 1.5rem;
+}
+
+.summary-total {
+  font-weight: bold;
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+}
+
+/* === Confirmation & Receipt Modals === */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+.modal.show {
+  display: flex;
+}
+
+.modal-content {
+  background: #f9f7f3;
+  padding: 2.5rem;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 6px 30px rgba(0,0,0,0.3);
+  max-width: 420px;
+  width: 90%;
+}
+
+.confirm-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.confirm-btn {
+  border: none;
+  border-radius: 25px;
+  padding: 0.7rem 1.5rem;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: 0.3s ease;
+}
+
+.confirm-btn.yes {
+  background: #1a1a1a;
+  color: #fff;
+}
+
+.confirm-btn.yes:hover {
+  background: #8b6b4a;
+}
+
+.confirm-btn.no {
+  background: #ccc;
+}
+
+.confirm-btn.no:hover {
+  background: #999;
+}
+
+.download-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  background: #8b6b4a;
+  color: #fff;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+  background: #1a1a1a;
+}
+
+
+
+/* Subtle animation for smoother entry */
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.home-btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  background: #1a1a1a;
+  color: #fff;
+  padding: 0.8rem 2rem;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.home-btn:hover {
+  background: #8b6b4a;
+}
+
+
+/* ---------- FOOTER (Checkout Page) ---------- */
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 0.9rem;
+  color: #777;
+  background: transparent;
+  position: relative;
+  bottom: 0;
+  left: 0;
+}
+
+/* If content is short, force footer to bottom */
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.checkout-container {
+  flex-grow: 1; /* Push footer to bottom */
+}
+
+/* ---------- SHIPPING OPTIONS (Clickable Text Style) ---------- */
+.shipping-options {
+  margin: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.shipping-option {
+  background: #f9f7f3;
+  border: 1px solid #e0dbd4;
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  font-size: 0.95rem;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.shipping-option:hover {
+  background: #f2ede6;
+}
+
+.shipping-option.active {
+  background: #1a1a1a;
+  color: #fff;
+  font-weight: 600;
+  border-color: #1a1a1a;
+}
+
+.price-summary {
+  margin-top: 1rem;
+  background: #faf8f5;
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.price-summary p {
+  margin: 0.3rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+

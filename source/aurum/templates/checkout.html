@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout - Aurum Gallery</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/checkout.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="lux-navbar">
+    <div class="brand">Aurum Gallery</div>
+    <nav class="nav-right">
+      <ul>
+        <li><a href="{{ url_for('shop.inventory') }}">Gallery</a></li>
+        <li><a href="{{ url_for('shop.home') }}#about">About</a></li>
+        <li><a href="{{ url_for('shop.home') }}#contact">Contact</a></li>
+        <li><a href="{{ url_for('auth.logout') }}" class="logout-btn">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- CHECKOUT CONTAINER -->
+  <section class="checkout-container">
+    <h1>Checkout</h1>
+    <p class="checkout-intro">Please fill in your details to complete your purchase.</p>
+
+    <div class="checkout-grid">
+
+      <!-- LEFT: FORM -->
+      <form id="checkout-form" class="checkout-form">
+        <h3>Billing Information</h3>
+
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="John Doe" required>
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="john@example.com" required>
+
+        <label for="address">Shipping Address</label>
+        <input type="text" id="address" placeholder="123 Main St, City, Country" required>
+
+        <label for="card">Card Number</label>
+        <input type="text" id="card" placeholder="XXXX-XXXX-XXXX-1234" required>
+
+        <div class="form-row">
+          <div>
+            <label for="exp">Expiration</label>
+            <input type="text" id="exp" placeholder="MM/YY" required>
+          </div>
+          <div>
+            <label for="cvv">CVV</label>
+            <input type="text" id="cvv" placeholder="123" required>
+          </div>
+        </div>
+
+        <button type="submit" class="complete-btn">Complete Purchase</button>
+      </form>
+
+      <!-- RIGHT: SUMMARY -->
+      <div class="order-summary">
+        <h3>Order Summary</h3>
+        <div id="summary-items"></div>
+        <hr>
+
+        <h3>Shipping Options</h3>
+        <div class="shipping-options">
+          <div class="shipping-option" data-cost="29">Overnight Shipping : <strong>$29</strong></div>
+          <div class="shipping-option" data-cost="19">3-Day Shipping : <strong>$19</strong></div>
+          <div class="shipping-option" data-cost="0">Ground Shipping : <strong>Free</strong></div>
+        </div>
+
+        <div class="price-summary">
+          <p>Subtotal: <span id="subtotal">$0</span></p>
+          <p>Tax (6%): <span id="tax">$0</span></p>
+          <p>Shipping: <span id="shippingCost">$29</span></p>
+          <hr>
+          <p><strong>Total: <span id="total">$0</span></strong></p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONFIRMATION MODAL -->
+  <div id="confirmModal" class="modal">
+    <div class="modal-content">
+      <h2>Confirm Purchase</h2>
+      <p>Are you sure you want to complete this purchase?</p>
+      <div class="confirm-buttons">
+        <button id="confirmYes" class="confirm-btn yes">Yes, Complete</button>
+        <button id="confirmNo" class="confirm-btn no">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- RECEIPT MODAL -->
+  <div id="receiptModal" class="modal">
+    <div class="modal-content">
+      <h2>Purchase Complete</h2>
+      <div id="receiptDetails"></div>
+      <button id="downloadReceipt" class="download-btn">Download Receipt</button>
+      <a href="{{ url_for('shop.inventory') }}" class="home-btn">Back to Shop</a>
+    </div>  
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Aurum Gallery. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="{{ url_for('static', filename='js/checkout.js') }}"></script>
+</body>
+</html>

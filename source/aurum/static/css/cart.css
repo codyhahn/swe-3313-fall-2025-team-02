@@ -1,0 +1,302 @@
+/* ---------- CART PAGE ---------- */
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, #f8f8f8 0%, #f5efe8 100%);
+}
+
+/* Ensure the whole page uses full height for footer placement */
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Make the cart container grow and push footer down */
+main, .cart-container {
+  flex: 1;
+}
+
+
+/* ---------- IMPROVED RESPONSIVE LUXURY NAVBAR ---------- */
+.lux-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background: rgba(0, 0, 0, 0.96);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5vw;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+/* brand logo/name */
+.lux-navbar .brand {
+  font-family: "Playfair Display", serif;
+  font-size: 1.4rem;
+  color: #fff;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+/* nav container */
+.nav-right ul {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* nav links */
+.nav-right a {
+  text-decoration: none;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+}
+
+.nav-right a:hover {
+  color: #c2a68d;
+}
+
+/* adjust padding for smaller screens */
+@media (max-width: 900px) {
+  .nav-right ul {
+    gap: 1.2rem;
+  }
+  .lux-navbar {
+    padding: 0 3vw;
+  }
+}
+
+/* handle narrow screens (tablet/mobile) */
+@media (max-width: 700px) {
+  .lux-navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem 0;
+  }
+  .nav-right ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .lux-navbar .brand {
+    margin-bottom: 0.5rem;
+  }
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, #f8f8f8 0%, #f5efe8 100%);
+}
+
+/* center the main cart area */
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 90px; /* space for navbar */
+  padding-bottom: 90px; /* breathing room above footer */
+  background: linear-gradient(180deg, #f8f8f8 0%, #f5efe8 100%);
+}
+
+/* cart box stays centered */
+.cart-container {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  padding: 2.5rem 3rem;
+  width: 90%;
+  max-width: 850px;
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1rem;
+}
+
+.cart-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.cart-item-info {
+  flex: 1;
+  padding: 0 1rem;
+}
+
+.cart-item-info h3 {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.cart-item-info p {
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+  color: #6a6a6a;
+}
+
+.remove-btn {
+  background: none;
+  border: 1px solid #b33;
+  color: #b33;
+  border-radius: 25px;
+  padding: 0.4rem 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.remove-btn:hover {
+  background: #b33;
+  color: white;
+}
+
+.cart-summary {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.total {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.cart-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* makes it responsive */
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Normalize both <a> and <button> */
+.cart-buttons button,
+.cart-buttons a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Inter", sans-serif !important;  /* 👈 Force identical font */
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  line-height: 1; /* even vertical alignment */
+  text-decoration: none;
+  border: none;
+  border-radius: 30px;
+  padding: 0.85rem 2.4rem;
+  cursor: pointer;
+  min-width: 200px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  background: #1a1a1a;
+  color: #fff;
+}
+
+.cart-buttons button:hover,
+.cart-buttons a:hover {
+  background: #7a5e3a;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Distinct style for Clear Cart */
+.clear-btn {
+  background: #fff;
+  color: #1a1a1a;
+  border: 1px solid #1a1a1a;
+}
+
+.clear-btn:hover {
+  background: #1a1a1a;
+  color: #fff;
+}
+
+/* Proceed to Checkout button */
+.checkout-btn {
+  background: #1a1a1a;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 0.9rem 2.4rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.checkout-btn:hover {
+  background: #8b6b4a;
+  transform: translateY(-2px);
+}
+
+/* Popup */
+.cart-popup {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  background: #000;
+  color: #fff;
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  font-size: 0.9rem;
+}
+
+.cart-popup.show {
+  opacity: 1;
+}
+
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 0.9rem;
+  color: #777;
+  border-top: 1px solid #ddd;
+  background: #fff;
+}

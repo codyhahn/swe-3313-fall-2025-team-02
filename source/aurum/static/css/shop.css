@@ -1,0 +1,455 @@
+/* ---------- BASE ---------- */
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: #f8f6f2;
+  color: #1a1a1a;
+  overflow-x: hidden;
+}
+
+.lux-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background: rgba(0, 0, 0, 0.96);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5vw;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+/* brand logo/name */
+.lux-navbar .brand {
+  font-family: "Playfair Display", serif;
+  font-size: 1.4rem;
+  color: #fff;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+/* nav container */
+.nav-right ul {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* nav links */
+.nav-right a {
+  text-decoration: none;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+}
+
+.nav-right a:hover {
+  color: #c2a68d;
+}
+
+/* adjust padding for smaller screens */
+@media (max-width: 900px) {
+  .nav-right ul {
+    gap: 1.2rem;
+  }
+  .lux-navbar {
+    padding: 0 3vw;
+  }
+}
+
+/* handle narrow screens (tablet/mobile) */
+@media (max-width: 700px) {
+  .lux-navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem 0;
+  }
+  .nav-right ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .lux-navbar .brand {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* ---------- FIX SHOP LAYOUT ---------- */
+
+/* Make the main shop section full width and visually balanced */
+.shop-header {
+  margin-top: 70px; /* space for fixed navbar */
+  background: radial-gradient(circle at center, #fffdf9 0%, #f4eee5 100%);
+  text-align: center;
+  padding: 7rem 2rem 3rem; /* taller header */
+  min-height: 30vh; /* ensures good spacing even on wide screens */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Center the text and search box together */
+.shop-intro {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Search bar remains centered but now scales better */
+.search-bar {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+/* Adjust gallery layout for full-width use */
+.product-gallery {
+  padding: 6rem 4vw 8rem;
+  background: #f8f6f2;
+  min-height: 100vh; /* makes gallery fill page space */
+}
+
+/* Make the grid span the full width */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  width: 100%;
+  max-width: 1800px; /* slightly wider container */
+  margin: 0 auto;
+  justify-items: center;
+}
+
+/* Balance card size and spacing */
+.art-card {
+  width: 100%;
+  max-width: 320px; /* keeps consistency */
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  padding-bottom: 1rem;
+}
+
+
+/* ---------- SEARCH BAR ---------- */
+.search-bar {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.search-bar input {
+  width: 320px;
+  max-width: 80%;
+  padding: 0.8rem 1rem;
+  border: 1px solid #d6d2cb;
+  border-radius: 2rem;
+  background: #fff;
+  font-size: 1rem;
+  color: #1a1a1a;
+  font-family: "Inter", sans-serif;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.search-bar input:focus {
+  border-color: #8b6b4a;
+  box-shadow: 0 0 6px rgba(139, 107, 74, 0.3);
+}
+
+.search-bar button {
+  background: #1a1a1a;
+  color: #fff;
+  border: none;
+  border-radius: 2rem;
+  padding: 0.8rem 1.6rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.search-bar button:hover {
+  background: #8b6b4a;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .search-bar {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .search-bar input {
+    width: 100%;
+    max-width: 90%;
+  }
+
+  .search-bar button {
+    width: 120px;
+  }
+}
+
+
+/* ---------- PRODUCT GRID ---------- */
+.product-gallery {
+  padding: 6rem 5vw 8rem;
+  background: radial-gradient(circle at center, #bbbbbb 0%, #f4eee5 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* ---------- CENTER PRODUCT GRID ---------- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 3rem 2rem;
+  justify-content: center;          /* ✅ centers all cards horizontally */
+  justify-items: center;            /* ✅ keeps each card centered within its grid cell */
+  align-items: start;
+  max-width: 1600px;                /* keeps grid contained on large screens */
+  margin: 0 auto;                   /* ✅ centers grid container itself */
+  padding-bottom: 5rem;
+}
+
+
+/* ---------- PRODUCT CARD ---------- */
+.art-card {
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  padding-bottom: 1rem;
+}
+
+.art-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 16px 36px rgba(0,0,0,0.12);
+}
+
+.art-card img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+}
+
+.art-card h3 {
+  margin-top: 1rem;
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: 1.3rem;
+  color: #1a1a1a;
+}
+
+/* ---------- ERA LABEL ---------- */
+.era {
+  font-family: "Inter", sans-serif;
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #7c6f5f;
+  margin-top: 0.4rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.03em;
+}
+
+
+.art-card .price {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #8b6b4a;
+  margin: 0.5rem 0 1rem;
+}
+
+.art-card button {
+  background: #1a1a1a;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.8rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.art-card button:hover {
+  background: #8b6b4a;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem 0;
+  font-size: 0.9rem;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 1024px) {
+  .art-card img {
+    height: 300px;
+  }
+  .gallery-grid {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+  .art-card img {
+    height: 260px;
+  }
+}
+
+@media (max-width: 480px) {
+  .shop-header h1 {
+    font-size: 2.2rem;
+  }
+  .shop-header p {
+    font-size: 1rem;
+  }
+}
+
+
+/* ---------- PRODUCT DETAIL MODAL ---------- */
+/* ===== MODAL OVERLAY (required) ===== */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.55);
+  backdrop-filter: blur(2px);
+  display: none;
+  align-items: center;          /* centers vertically */
+  justify-content: center;      /* centers horizontally */
+  padding: 2rem 1.25rem;
+  z-index: 9999;
+}
+
+.modal.open {
+  display: flex;
+}
+
+.modal-content {
+  background-color: #f9f7f3;
+  padding: 3rem;
+  border-radius: 18px;
+  max-width: 1100px;
+  width: 90%;                  /* responsive */
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.4s ease;
+  position: relative;
+  margin: 0;                   /* ✅ remove margin that pushes it down */
+}
+
+.modal-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.modal-image img {
+  width: 400px; /* bigger image */
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.modal-info {
+  flex: 1;
+  min-width: 350px;
+}
+
+.modal-info h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+  color: #1a1a1a;
+}
+
+.modal-info p {
+  margin: 0.8rem 0;
+  line-height: 1.6;
+  color: #333;
+}
+
+.modal-info .price {
+  font-weight: bold;
+  color: #7a5e3a;
+  font-size: 1.2rem;
+}
+
+.add-cart-btn {
+  margin-top: 1.5rem;
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 0.9rem 2.2rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.add-cart-btn:hover {
+  background-color: #7a5e3a;
+}
+
+.close-btn {
+  position: absolute;
+  top: 18px;
+  right: 25px;
+  font-size: 2.2rem;
+  cursor: pointer;
+  color: #555;
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #000;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Receipt - Aurum Gallery</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+  body {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    background: #f8f4ec;
+    color: #1a1a1a;
+  }
+
+  /* NAVBAR */
+  .lux-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    background: #fff;
+    color: #1a1a1a;
+    border-bottom: 1px solid #e8dcc5;
+  }
+  .lux-navbar .brand {
+    font-family: "Playfair Display", serif;
+    font-size: 1.4rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #1a1a1a;
+  }
+  .lux-navbar .nav-right ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .lux-navbar .nav-right a {
+    color: #1a1a1a;
+    text-decoration: none;
+    font-size: 0.95rem;
+  }
+
+  /* RECEIPT CARD */
+  .receipt-wrapper {
+    max-width: 750px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 18px;
+    border: 1px solid #e8dcc5;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+  }
+
+  .receipt-header h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 32px;
+    letter-spacing: 0.5px;
+    color: #1a1a1a;
+  }
+
+  .receipt-section {
+    margin-top: 25px;
+  }
+
+  .receipt-section h3 {
+    margin-bottom: 10px;
+    font-family: "Inter", sans-serif;
+    color: #1a1a1a;
+  }
+
+  /* TABLE */
+  .order-items {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+  }
+
+  .order-items th,
+  .order-items td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #e8dcc5;
+    color: #1a1a1a;
+  }
+
+  /* TOTAL */
+  .total-line {
+    margin-top: 8px;
+    text-align: right;
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a1a;
+  }
+
+  /* BUTTONS */
+  .receipt-buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+  }
+
+  .btn {
+    padding: 12px 20px;
+    background: #d4c4a8;
+    border: none;
+    color: #1a1a1a;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.2s ease;
+  }
+
+  .btn:hover {
+    background: #c6b79e;
+  }
+
+  .btn-dark {
+    background: #1a1a1a;
+    border: 1px solid #d4c4a8;
+    color: #ffffff;
+  }
+
+  .btn-dark:hover {
+    background: #333;
+  }
+
+</style>
+
+</head>
+<body>
+
+<header class="lux-navbar">
+  <div class="brand">Aurum Gallery</div>
+  <nav class="nav-right">
+    <ul>
+      <li><a href="{{ url_for('shop.inventory') }}">Gallery</a></li>
+      <li><a href="{{ url_for('shop.cart') }}">Cart</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="receipt-wrapper">
+
+  <div class="receipt-header">
+    <h1>Order Receipt</h1>
+    <p>Order ID: <strong>{{ order.id }}</strong></p>
+    <p>Date: <strong>{{ order.date }}</strong></p>
+    <p>Customer: <strong>{{ order.customer_name }}</strong></p>
+  </div>
+
+  <div class="receipt-section">
+    <h3>Items Purchased</h3>
+
+    <table class="order-items">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Era</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for item in items %}
+        <tr>
+          <td>{{ item.name }}</td>
+          <td>{{ item.era }}</td>
+          <td>${{ "%.2f"|format(item.price) }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <div class="receipt-section">
+    <h3>Summary</h3>
+
+    <p class="total-line">Subtotal: ${{ "%.2f"|format(order.subtotal) }}</p>
+    <p class="total-line">Tax (6%): ${{ "%.2f"|format(order.tax) }}</p>
+    <p class="total-line">Shipping: ${{ "%.2f"|format(order.shipping) }}</p>
+    <h2 class="total-line"><strong>Total: ${{ "%.2f"|format(order.total) }}</strong></h2>
+  </div>
+
+  <div class="receipt-buttons">
+    <a class="btn" href="{{ url_for('shop.inventory') }}">Back to Gallery</a>
+    <button class="btn btn-dark" onclick="window.print()">Print Receipt</button>
+  </div>
+
+</div>
+
+</body>
+</html>
