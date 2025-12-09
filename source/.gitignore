@@ -1,0 +1,18 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+env/
+venv/
+
+# Instance folder — keep folder, ignore DB
+instance/app.db
+
+# SQLite files (just in case)
+*.db
+*.sqlite3
+
+# Environment files
+.env
+.env.*
