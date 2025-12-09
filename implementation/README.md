@@ -38,13 +38,43 @@ cd "SWE-3313 Project"
 Your project root should contain:
 
 ```
-source/
-instance/
-implementation/
-docker-compose.yml
-Dockerfile
-.env
-env.example
+swe-3313-fall-2025-team-02/
+│
+├── implementation/
+│
+├── project-plan/
+│
+├── requirements/
+│
+├── source/
+│   │
+│   ├── aurum/
+│   │   ├── static/
+│   │   │   ├── css/
+│   │   │   ├── images/
+│   │   │   └── js/
+│   │   │
+│   │   ├── templates/
+│   │   │
+│   │   ├── __init__.py
+│   │   ├── admin.py
+│   │   ├── app.py
+│   │   ├── auth.py
+│   │   ├── db.py
+│   │   ├── init_db.py
+│   │   ├── schema.sql
+│   │   └── shop.py
+│   │   
+│   ├── .gitignore
+│   ├── docker-compose.yml
+│   ├── Dockerfile
+│   ├── env.example
+│   └── requirements.txt
+│
+├── technical-design/
+│
+└── README.md
+
 ```
 
 ---
@@ -66,17 +96,26 @@ This is automatically loaded inside Docker.
 The Aurum Gallery Application uses SQLite.  
 **No manual setup is required.**
 
-On startup, the Docker container:
+When you run:
 
-1. Checks whether `instance/app.db` exists  
-2. If missing, runs `init_db.py`  
-3. Executes `schema.sql`  
-4. Seeds sample users and required tables  
+```bash
+docker compose up --build
+```
+The container will automatically:
 
-The database is stored here:
+1. Create the `aurum/instance/` directory if it does not already exist
+2. Check whether `instance/app.db` exists
+3. If the database is missing:
+   - Create `app.db`
+   - Run `init_db.py`
+   - Execute all SQL commands in `schema.sql`
+   - Seed the admin account, regular user account, and inventory data
+4. If `app.db` already exists, initialization is skipped
+
+The database is stored locally at:
 
 ```
-instance/app.db
+source/instance/app.db
 ```
 
 This directory is mounted as a Docker volume so the DB persists across restarts.
